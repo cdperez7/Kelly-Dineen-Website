@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Kelly Dineen</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <!-- stylesheets -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/portfolio_one.css" rel="stylesheet" type="text/css" />
+  <link href="css/colour.css" rel="stylesheet" type="text/css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+
+    <!-- begin header -->
+    <header>
+      <div id="logo">
+        <h1>Kelly<a href="#">Dineen</a></h1>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li><a href="portfolio_one.html">My Approach to Therapy</a></li>
+          <li class="selected"><a href="blog.html">Locations & Insurance</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- begin content -->
+    <div id="site_content">
+      <!-- start gallery HTML containers -->
+      <!-- <div id="gallery" class="content">
+        <div class="slideshow-container">
+          <div id="loading" class="loader"></div>
+          <div id="slideshow" class="slideshow"></div>
+        </div>
+      </div> -->
+      <div id="site_content">
+        <div id="left_content">
+          <div>
+            <h1>Locations</h1>
+            <p><strong>Tuesday and Friday:</strong></p>
+            <p>
+              One East Delaware Pl. Suite 310
+              Chicago, IL 60611
+            </p>
+
+            <p><strong>Thursday:</strong></p>
+            <p>
+              1400 Renaissance Drive
+              Suite 305
+              Park Ridge, IL 60068
+            </p>
+
+            <p><strong>Monday and Wednesday:</strong></p>
+            <p>
+              191 Waukegan Road, Suite 120
+              Northfield, IL 60093
+            </p>
+
+          </div>
+
+          <!-- end gallery HTML containers -->
+        </div>
+
+        <div id="insurance_content">
+          <h1>Insurances Taken</h1>
+          <p>Medicare</p>
+          <p>BCBS PPO</p>
+          <p>Aetna</p>
+          <p>UHC</p>
+          <p>Magellan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end content -->
+
+  <!-- begin footer -->
+  <!-- <footer>
+    <p>Copyright &copy; 2019: All Rights Reserved</p>
+
+  </footer> -->
+  <!-- end footer -->
+
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <!-- initialise sooperfish menu -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+  <script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+  <script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      // we only want these styles applied when javascript is enabled
+      $('div.navigation').css({ 'width': '450px', 'float': 'left' });
+      $('div.content').css('display', 'block');
+      // initially set opacity on thumbs and add additional styling for hover effect on thumbs
+      var onMouseOutOpacity = 0.67;
+      $('#thumbs ul.thumbs li').opacityrollover({
+        mouseOutOpacity: onMouseOutOpacity,
+        mouseOverOpacity: 1.0,
+        fadeSpeed: 'fast',
+        exemptionSelector: '.selected'
+      });
+      // initialize advanced galleriffic gallery
+      var gallery = $('#thumbs').galleriffic({
+        delay: 3500,
+        numThumbs: 10,
+        preloadAhead: 10,
+        enableTopPager: false,
+        enableBottomPager: true,
+        maxPagesToShow: 7,
+        imageContainerSel: '#slideshow',
+        controlsContainerSel: '#controls',
+        captionContainerSel: '#caption',
+        loadingContainerSel: '#loading',
+        renderSSControls: true,
+        renderNavControls: true,
+        playLinkText: 'Play Slideshow',
+        pauseLinkText: 'Pause Slideshow',
+        prevLinkText: '&lsaquo; Previous Photo',
+        nextLinkText: 'Next Photo &rsaquo;',
+        nextPageLinkText: 'Next &rsaquo;',
+        prevPageLinkText: '&lsaquo; Prev',
+        enableHistory: false,
+        autoStart: false,
+        syncTransitions: true,
+        defaultTransitionDuration: 900,
+        onSlideChange: function (prevIndex, nextIndex) {
+          // 'this' refers to the gallery, which is an extension of $('#thumbs')
+          this.find('ul.thumbs').children()
+            .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+            .eq(nextIndex).fadeTo('fast', 1.0);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

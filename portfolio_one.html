@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Kelly Dineen</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <!-- stylesheets -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="css/portfolio_one.css" rel="stylesheet" type="text/css" />
+  <link href="css/colour.css" rel="stylesheet" type="text/css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+</head>
+
+<body>
+  <div id="main">
+
+    <!-- begin header -->
+    <header>
+      <div id="logo">
+        <h1>Kelly<a href="#">Dineen</a></h1>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About me</a></li>
+          <li class="selected"><a href="portfolio_one.html">My Approach to Therapy</a></li>
+          <li><a href="blog.html">Locations & Insurance</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- begin content -->
+    <div id="site_content">
+      <!-- start gallery HTML containers -->
+      <!-- <div id="gallery" class="content">
+        <div class="slideshow-container">
+          <div id="loading" class="loader"></div>
+          <div id="slideshow" class="slideshow"></div>
+        </div>
+      </div> -->
+      <div id="full_content">
+        <div>
+          <h1>My Approach to Therapy</h1>
+          <p>My approach is holistic, relational and integrative. Therapy is first and foremost a relationship built on
+            trust, honesty, acceptance and a commitment to working together to achieve change. Together we will develop
+            a plan for change that will take into account your unique personality and the circumstances you are dealing
+            with. No one approach works for everyone and we will work to identify your challenges, break them into
+            manageable pieces and move forward at a pace that is comfortable and sustainable for you.
+          </p>
+          <p>I believe that when we get off track, as we all do, that we lose balance. For example, we often stop
+            exercising, forget about our meditation practice, eat poorly, sleep poorly and isolate from friends and
+            family. The healthy rhythms of our lives are disrupted. We get stuck in our anxiety, depression, sadness,
+            guilt or shame. Most importantly, we lose sight of our inherent strengths and focus on the negative. Therapy
+            helps us find our way back to ourselves, encourages us to hear our own voice and teaches us new ways of
+            reacting and feeling. We realize that we might not like the difficult things we have to deal with in our
+            lives, might in fact hate them, but we CAN manage them! We are stronger than what happens to us.
+          </p>
+          <p>Therapy is not magical transformation, it is hard work and requires a dedicated commitment to change. It
+            can be uncomfortable at times to look at things that have hurt us. Therapy is the way to move through and
+            past hurts and become stronger in the process.
+          </p>
+        </div>
+
+        <!-- end gallery HTML containers -->
+      </div>
+    </div>
+    <!-- end content -->
+
+    <!-- begin footer -->
+    <footer>
+      <p>Copyright &copy; 2019: All Rights Reserved</p>
+
+    </footer>
+    <!-- end footer -->
+
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <!-- initialise sooperfish menu -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('ul.sf-menu').sooperfish();
+    });
+  </script>
+  <script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+  <script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      // we only want these styles applied when javascript is enabled
+      $('div.navigation').css({ 'width': '450px', 'float': 'left' });
+      $('div.content').css('display', 'block');
+      // initially set opacity on thumbs and add additional styling for hover effect on thumbs
+      var onMouseOutOpacity = 0.67;
+      $('#thumbs ul.thumbs li').opacityrollover({
+        mouseOutOpacity: onMouseOutOpacity,
+        mouseOverOpacity: 1.0,
+        fadeSpeed: 'fast',
+        exemptionSelector: '.selected'
+      });
+      // initialize advanced galleriffic gallery
+      var gallery = $('#thumbs').galleriffic({
+        delay: 3500,
+        numThumbs: 10,
+        preloadAhead: 10,
+        enableTopPager: false,
+        enableBottomPager: true,
+        maxPagesToShow: 7,
+        imageContainerSel: '#slideshow',
+        controlsContainerSel: '#controls',
+        captionContainerSel: '#caption',
+        loadingContainerSel: '#loading',
+        renderSSControls: true,
+        renderNavControls: true,
+        playLinkText: 'Play Slideshow',
+        pauseLinkText: 'Pause Slideshow',
+        prevLinkText: '&lsaquo; Previous Photo',
+        nextLinkText: 'Next Photo &rsaquo;',
+        nextPageLinkText: 'Next &rsaquo;',
+        prevPageLinkText: '&lsaquo; Prev',
+        enableHistory: false,
+        autoStart: false,
+        syncTransitions: true,
+        defaultTransitionDuration: 900,
+        onSlideChange: function (prevIndex, nextIndex) {
+          // 'this' refers to the gallery, which is an extension of $('#thumbs')
+          this.find('ul.thumbs').children()
+            .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+            .eq(nextIndex).fadeTo('fast', 1.0);
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
