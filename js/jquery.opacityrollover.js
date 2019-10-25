@@ -1,10 +1,4 @@
-/**
- * jQuery Opacity Rollover plugin
- *
- * Copyright (c) 2009 Trent Foley (http://trentacular.com)
- * Licensed under the MIT License:
- *   http://www.opensource.org/licenses/mit-license.php
- */
+
 ;(function($) {
 	var defaults = {
 		mouseOutOpacity:   0.67,
